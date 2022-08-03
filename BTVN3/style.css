@@ -1,0 +1,47 @@
+header {
+  text-align: center;
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px 10px 0px 10px;
+  border: 2px solid;
+  background-color: antiquewhite;
+}
+
+ul {
+  border: 2px solid blue;
+  background-color: rgb(216, 216, 255);
+  text-align: left;
+  padding: 10px;
+  margin: 10px 0px 10px 0px;
+}
+
+li {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.weekTitle {
+  color: blue;
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.optional {
+  color: red;
+}
+
+.weekName {
+  font-style: italic;
+}
+
+div {
+  font-weight: bold;
+}
+
+#readingList {
+  font-size: 40px;
+  margin: 10px;
+}
