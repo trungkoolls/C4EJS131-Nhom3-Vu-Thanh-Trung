@@ -1,0 +1,70 @@
+body {
+  margin: 0px;
+}
+
+.pagetop {
+  padding: 12px 12px 12px 22px;
+}
+
+.houseImg {
+  height: 50px;
+}
+
+.loginBtn {
+  height: 50px;
+  width: 130px;
+  font-weight: bold;
+  background-color: rgb(4, 170, 109);
+  border: none;
+  color: white;
+  border-radius: 25px;
+  font-size: 18px;
+  float: right;
+  transition-duration: 0.4s;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.loginBtn:hover {
+  background-color: rgb(3, 146, 94);
+}
+
+.bar {
+  background-color: rgba(41, 42, 53, 255);
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+}
+
+.barBtn {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: none;
+  background-color: inherit;
+  height: 44px;
+  transition-duration: 0.4s;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 15px 9px 15px;
+  font-size: 17px;
+}
+
+.barBtn:hover {
+  background-color: rgba(0, 0, 0, 255);
+}
+
+i {
+  font-size: 20px;
+}
+
+.btnRight {
+  float: right;
+}
+
+.icon {
+  height: 22px;
+  margin-bottom: -3px;
+}
+
+.placeHolder {
+  text-align: center;
+}
