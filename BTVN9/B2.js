@@ -13,10 +13,9 @@ const user = {
 
 function recursive(Object) {
   for (key in Object) {
-    if (typeof key !== "object") {
-      console.log(key);
-    } else {
-      recursive(key);
+    console.log(key);
+    if (typeof Object[key] === "object") {
+      recursive(Object[key]);
     }
   }
 }
