@@ -21,5 +21,3 @@ function recursive(Object) {
 }
 
 recursive(user);
-
-// Sur thôi, khó quá ko làm được, đợi chữa bài xong học theo vậy :'(
