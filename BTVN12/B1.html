@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BTVN12-B1</title>
+
+    <link rel="stylesheet" href="./B1.css" />
+  </head>
+  <body>
+    <div id="readingList">
+      <div id="header">
+        <h1>Reading List</h1>
+        <p>Reading list in 2022</p>
+        <input
+          id="searchInput"
+          type="text"
+          placeholder=" Search books..."
+          onkeyup="searchList(this.value)"
+        />
+      </div>
+
+      <div id="listContainer">
+        <h2 id="tableTitle">Books to Read</h2>
+        <ul>
+          <li>Lập trình web căn bản</li>
+          <li>Lập tình FullStack Web</li>
+          <li>Lập trình Mobile App</li>
+          <li>Lập trình Nodejs</li>
+        </ul>
+        <div id="addBtnContainer">
+          <input id="addInput" type="text" placeholder=" Add a book..." />
+          <span class="addBtn" onclick="addAnListItem()">add</span>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="./B1.js"></script>
+</html>
