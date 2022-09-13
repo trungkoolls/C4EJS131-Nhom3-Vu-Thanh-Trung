@@ -31,6 +31,8 @@ function timSoNguyenTo() {
     for (j = 2; j < arr[i]; j++) {
       if (arr[i] % j == 0) {
         arr.splice(i, 1);
+        i--;
+        j = 2;
       }
     }
   }
