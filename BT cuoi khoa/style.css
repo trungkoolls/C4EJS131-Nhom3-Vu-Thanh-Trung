@@ -1,0 +1,422 @@
+* {
+  margin: 0px;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #ababab;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 5rem;
+  margin: 30px 0px;
+}
+
+span.type {
+  display: inline-block;
+  padding: 2px 5px;
+  margin: 0px 5px;
+  width: 80px;
+  height: auto;
+}
+
+span.male {
+  color: #0085ff;
+}
+
+span.female {
+  color: #ff0099;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 10px 0px;
+  width: 350px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+td {
+  font-size: 20px;
+  padding: 5px 10px;
+  text-align: center;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+td.key {
+  text-align: end;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-left: none;
+  border-right: none;
+}
+td.value {
+  text-align: start;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-left: none;
+  border-right: none;
+}
+
+.header {
+  background-color: #252525;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerTitle {
+  color: rgba(32, 176, 238, 1);
+  font-size: 80px;
+  font-weight: bolder;
+  margin: 0px;
+  padding: 10px 0px 31px 0px;
+  text-align: start;
+}
+
+img.header {
+  max-width: 6%;
+  min-width: 5%;
+  height: auto;
+  margin: 0px;
+}
+
+.logo {
+  max-width: 120px;
+}
+
+.container {
+  background-color: white;
+  width: 1300px;
+  padding: 0px 50px 100px 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.navBar {
+  width: 100%;
+  display: flex;
+  background-color: #3e3e3e;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  border-radius: 10px;
+  position: relative;
+  top: -25px;
+}
+
+.navItem {
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 1;
+}
+
+.item {
+  color: white;
+  font-size: 25px;
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  font-size: 22px;
+  background-image: url("./img/magnifying\ glass.png");
+  background-color: #737373;
+  background-position: 5px 5px;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  padding: 5px 20px 5px 35px;
+  color: white;
+}
+
+.infoContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.artwork {
+  width: 340px;
+  height: auto;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+td > div {
+  border-radius: 5px;
+}
+
+.statBar {
+  vertical-align: bottom;
+}
+
+.typeDef {
+  width: 380px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0px;
+}
+
+.typeContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  color: white;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.nor {
+  background-color: #c8c8c8;
+}
+
+.fir {
+  background-color: #ff4422;
+}
+
+.wat {
+  background-color: #3399ff;
+}
+
+.gra {
+  background-color: #77cc55;
+}
+
+.ele {
+  background-color: #ffcc33;
+}
+
+.ice {
+  background-color: #66ccff;
+}
+
+.fig {
+  background-color: #bb5544;
+}
+
+.poi {
+  background-color: #aa5599;
+}
+
+.roc {
+  background-color: #bbaa66;
+}
+
+.gro {
+  background-color: #ddbb55;
+}
+
+.fly {
+  background-color: #8899ff;
+}
+
+.bug {
+  background-color: #aabb22;
+}
+
+.psy {
+  background-color: #ff5599;
+}
+
+.gho {
+  background-color: #6666bb;
+}
+
+.dar {
+  background-color: #775544;
+}
+
+.ste {
+  background-color: #aaaabb;
+}
+
+.dra {
+  background-color: #7766ee;
+}
+
+.fai {
+  background-color: #ee99ee;
+}
+
+.superDuperEff {
+  background-color: #73d216;
+}
+
+.superEff {
+  background-color: #4e9a06;
+}
+
+.notVeryEff {
+  background-color: #a40000;
+}
+
+.notVeryVeryEff {
+  background-color: #7c0000;
+}
+
+.notEff {
+  background-color: #252525;
+}
+
+.rank1 {
+  background-color: #f34444;
+}
+
+.rank2 {
+  background-color: #ff7f0f;
+}
+
+.rank3 {
+  background-color: #ffdd57;
+}
+
+.rank4 {
+  background-color: #a0e515;
+}
+
+.rank5 {
+  background-color: #23cd5e;
+}
+
+.rank6 {
+  background-color: #00c2b8;
+}
+
+.dexinfo {
+  margin: 10px 0px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer {
+  /* position: absolute;
+  bottom: 0px;
+  width: 100%; */
+  background-color: #252525;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.textFooter {
+  color: white;
+}
+
+a > i {
+  color: white;
+  font-size: 50px;
+}
+
+.footerItem {
+  margin: 20px 10px;
+}
+
+.searchList {
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  min-width: 200px;
+  background-color: #000;
+}
+
+.searchBar {
+  display: flex;
+}
+
+div ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchResult {
+  background-color: #000;
+  position: absolute;
+  top: 100%;
+}
+
+div ul li {
+  color: white;
+  list-style-type: none;
+  width: 220px;
+}
+
+div ul {
+  padding: 0px;
+}
+
+div ul li a {
+  display: block;
+  color: white;
+  background-color: black;
+  width: 100%;
+  border: 1px solid white;
+  padding: 5px 0px 5px 40px;
+  cursor: pointer;
+}
+
+.active {
+  visibility: visible;
+}
+
+.tongQuanHe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoTongQuanHe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.video {
+  margin: 5px 0px;
+}
+
+.teamBuilding {
+  display: flex;
+  justify-content: center;
+}
+
+.slot {
+  width: 380px;
+  height: 380px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 5px 5px;
+}
+
+.team {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

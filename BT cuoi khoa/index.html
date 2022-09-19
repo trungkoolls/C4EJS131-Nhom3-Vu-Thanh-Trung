@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon Database</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <div class="header">
+        <img id="info" class="logo" src="./img/logo.png" alt="" />
+        <a class="headerTitle" href="">Pokémon Database</a>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: center">
+      <div class="container">
+        <div style="display: flex; justify-content: center">
+          <div class="navBar">
+            <div class="navItem">
+              <a class="item" href="#info">Tra cứu Pokémon</a>
+              <a class="item" href="#tongQuanHe">Tổng quan hệ</a>
+              <a class="item" href="#">Tạo đội hình</a>
+            </div>
+            <form class="searchBar">
+              <input
+                type="text"
+                name="search"
+                onkeyup="searching(this.value)"
+              />
+              <div id="searchResult" class="searchResult">
+                <ul id="myUl"></ul>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="infoContainer">
+          <h1 id="name">Bulbasaur</h1>
+        </div>
+
+        <div class="info">
+          <img
+            id="artwork"
+            class="artwork"
+            src="./img/pokemon_Artwork/1.png"
+            alt=""
+          />
+
+          <div class="dexinfo">
+            <table>
+              <tr>
+                <td class="key">National No</td>
+                <td id="number" class="value">001</td>
+              </tr>
+              <tr>
+                <td class="key">Type</td>
+                <td class="value" style="display: flex">
+                  <span id="type1" class="type gra">GRASS</span>
+                  <span id="type2" class="type poi">POISON</span>
+                </td>
+              </tr>
+              <!-- <tr>
+                <td class="key">Species</td>
+                <td class="value">Seed Pokémon</td>
+              </tr> -->
+              <tr>
+                <td class="key">Height</td>
+                <td id="height" class="value">0.7 m (2'04")</td>
+              </tr>
+              <tr>
+                <td class="key">Weight</td>
+                <td id="weight" class="value">6.9 kg (15.2lbs)</td>
+              </tr>
+              <tr>
+                <td class="key">Abilities</td>
+                <td id="abilities" class="value">
+                  Overgrow
+                  <br />
+                  Chlorophyll (HA)
+                </td>
+              </tr>
+              <!-- <tr>
+                <td class="key">Egg Groups</td>
+                <td class="value">
+                  Grass <br />
+                  Monster
+                </td>
+              </tr>
+              <tr>
+                <td class="key">Gender</td>
+                <td class="value">
+                  <span class="male">87.5% male</span>
+                  <br />
+                  <span class="female">12.5% female</span>
+                </td>
+              </tr> -->
+            </table>
+            <div class="typeDef">
+              <div class="typeContainer">
+                <div class="nor type">NOR</div>
+                <div id="nor" class="type"></div>
+              </div>
+              <div class="typeContainer">
+                <div class="fir type">FIR</div>
+                <div id="fir" class="type superEff">2</div>
+              </div>
+              <div class="typeContainer">
+                <div class="wat type">WAT</div>
+                <div id="wat" class="type notVeryEff">1/2</div>
+              </div>
+              <div class="typeContainer">
+                <div class="gra type">GRA</div>
+                <div id="gra" class="type notVeryVeryEff">1/4</div>
+              </div>
+              <div class="typeContainer">
+                <div class="ele type">ELE</div>
+                <div id="ele" class="type notVeryEff">1/2</div>
+              </div>
+              <div class="typeContainer">
+                <div class="ice type">ICE</div>
+                <div id="ice" class="type superEff">2</div>
+              </div>
+              <div class="typeContainer">
+                <div class="fig type">FIG</div>
+                <div id="fig" class="type notVeryEff">1/2</div>
+              </div>
+              <div class="typeContainer">
+                <div class="poi type">POI</div>
+                <div id="poi" class="type"></div>
+              </div>
+              <div class="typeContainer">
+                <div class="roc type">ROC</div>
+                <div id="roc" class="type"></div>
+              </div>
+              <div class="typeContainer">
+                <div class="gro type">GRO</div>
+                <div id="gro" class="type"></div>
+              </div>
+              <div class="typeContainer">
+                <div class="fly type">FLY</div>
+                <div id="fly" class="type superEff">2</div>
+              </div>
+              <div class="typeContainer">
+                <div class="bug type">BUG</div>
+                <div id="bug" class="type"></div>
+              </div>
+              <div class="typeContainer">
+                <div class="psy type">PSY</div>
+                <div id="psy" class="type superEff">2</div>
+              </div>
+              <div class="typeContainer">
+                <div class="gho type">GHO</div>
+                <div id="gho" class="type"></div>
+              </div>
+              <div class="typeContainer">
+                <div class="dar type">DAR</div>
+                <div id="dar" class="type"></div>
+              </div>
+              <div class="typeContainer">
+                <div class="ste type">STE</div>
+                <div id="ste" class="type"></div>
+              </div>
+              <div class="typeContainer">
+                <div class="dra type">DRA</div>
+                <div id="dra" class="type"></div>
+              </div>
+              <div class="typeContainer">
+                <div class="fai type">FAI</div>
+                <div id="fai" class="type notVeryEff">1/2</div>
+              </div>
+            </div>
+          </div>
+          <div class="stats">
+            <table>
+              <tr>
+                <td>Max</td>
+                <td id="maxHP">294</td>
+                <td id="maxAtk">216</td>
+                <td id="maxDef">216</td>
+                <td id="maxSpa">251</td>
+                <td id="maxSpd">251</td>
+                <td id="maxSpe">207</td>
+              </tr>
+              <tr>
+                <td>Min</td>
+                <td id="minHP">200</td>
+                <td id="minAtk">92</td>
+                <td id="minDef">92</td>
+                <td id="minSpa">121</td>
+                <td id="minSpd">121</td>
+                <td id="minSpe">85</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="statBar" style="height: 255px">
+                  <div id="HPBar" style="height: 45px"></div>
+                </td>
+                <td class="statBar" style="height: 255px">
+                  <div id="AtkBar" style="height: 49px"></div>
+                </td>
+                <td class="statBar" style="height: 255px">
+                  <div id="DefBar" style="height: 49px"></div>
+                </td>
+                <td class="statBar" style="height: 255px">
+                  <div id="SpABar" style="height: 65px"></div>
+                </td>
+                <td class="statBar" style="height: 255px">
+                  <div id="SpDBar" style="height: 65px"></div>
+                </td>
+                <td class="statBar" style="height: 255px">
+                  <div id="SpeBar" style="height: 45px"></div>
+                </td>
+              </tr>
+              <tr>
+                <td id="total">318</td>
+                <td id="totalHP">45</td>
+                <td id="totalAtk">49</td>
+                <td id="totalDef">49</td>
+                <td id="totalSpa">65</td>
+                <td id="totalSpd">65</td>
+                <td id="totalSpe">45</td>
+              </tr>
+              <tr>
+                <td>Total</td>
+                <td>HP</td>
+                <td>Atk</td>
+                <td>Def</td>
+                <td>SpA</td>
+                <td>SpD</td>
+                <td>Spe</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tongQuanHe" class="tongQuanHe">
+      <div class="container">
+        <div class="infoContainer">
+          <h1>Tổng quan các hệ trong Pokemon</h1>
+        </div>
+        <div class="videoTongQuanHe">
+          <iframe
+            class="video"
+            max-width="560"
+            max-height="315"
+            src="https://www.youtube.com/embed/-HjOZofIm0w"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="video"
+            max-width="560"
+            max-height="315"
+            src="https://www.youtube.com/embed/WbfhYh4Bc6s"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="video"
+            max-width="560"
+            max-height="315"
+            src="https://www.youtube.com/embed/bXFfv41XKOk"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="video"
+            max-width="560"
+            max-height="315"
+            src="https://www.youtube.com/embed/HT-RariU9E0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="video"
+            max-width="560"
+            max-height="315"
+            src="https://www.youtube.com/embed/8sHbKuUBVj8"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="video"
+            max-width="560"
+            max-height="315"
+            src="https://www.youtube.com/embed/ANxdnkTmKUc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="video"
+            max-width="560"
+            max-height="315"
+            src="https://www.youtube.com/embed/ZnIYrSggtE4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="video"
+            max-width="560"
+            max-height="315"
+            src="https://www.youtube.com/embed/ysj9JXw3DWs"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="video"
+            max-width="560"
+            max-height="315"
+            src="https://www.youtube.com/embed/v8hb3sbzLaM"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="video"
+            max-width="560"
+            max-height="315"
+            src="https://www.youtube.com/embed/ElAxaw832QM"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="video"
+            max-width="560"
+            max-height="315"
+            src="https://www.youtube.com/embed/Md6knFYk-iE"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="video"
+            max-width="560"
+            max-height="315"
+            src="https://www.youtube.com/embed/Dok7s569jxM"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="video"
+            max-width="560"
+            max-height="315"
+            src="https://www.youtube.com/embed/fuhCkVHVPas"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="video"
+            max-width="560"
+            max-height="315"
+            src="https://www.youtube.com/embed/u3bAL3KdKTc"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="video"
+            max-width="560"
+            max-height="315"
+            src="https://www.youtube.com/embed/gmiZZdmg9iM"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="video"
+            max-width="560"
+            max-height="315"
+            src="https://www.youtube.com/embed/0P6dgdrXaX4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="video"
+            max-width="560"
+            max-height="315"
+            src="https://www.youtube.com/embed/EYWI-v9PxMY"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="video"
+            max-width="560"
+            max-height="315"
+            src="https://www.youtube.com/embed/ohSrx1twP_I"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: center">
+      <div class="container">
+        <div id="teamBuilding" class="infoContainer">
+          <h1>Tạo đội hình Pokémon</h1>
+        </div>
+        <div class="team">
+          <div id="slot1" class="slot"></div>
+          <div id="slot2" class="slot"></div>
+          <div id="slot3" class="slot"></div>
+          <div id="slot4" class="slot"></div>
+          <div id="slot5" class="slot"></div>
+          <div id="slot6" class="slot"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footerItem">
+        <p class="textFooter">
+          ** All copyrights of the videos belong to Jabarkas
+        </p>
+        <p class="textFooter">
+          This website is created for educational purposes only and is not for
+          commercial purposes
+        </p>
+      </div>
+
+      <div class="footerItem" style="text-align: center">
+        <a href="https://www.youtube.com/c/Jabarkas"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+        <p class="textFooter">Jabarkas</p>
+      </div>
+    </div>
+  </body>
+
+  <script
+    src="https://kit.fontawesome.com/58ce81581b.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+  <script src="./script.js"></script>
+</html>
