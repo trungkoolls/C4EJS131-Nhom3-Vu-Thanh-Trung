@@ -111,13 +111,13 @@ img.header {
   top: -25px;
 }
 
-.navItem {
+.navItems {
   display: flex;
   justify-content: space-evenly;
   flex-grow: 1;
 }
 
-.item {
+.navitem {
   color: white;
   font-size: 25px;
   border-radius: 10px;
@@ -128,8 +128,7 @@ input[type="text"] {
   width: 100%;
   box-sizing: border-box;
   border: none;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-radius: 4px;
   font-size: 22px;
   background-image: url("./img/magnifying\ glass.png");
   background-color: #737373;
@@ -154,7 +153,7 @@ input[type="text"] {
   display: flex;
   justify-content: space-around;
   padding: 0px;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -317,9 +316,6 @@ td > div {
 }
 
 .footer {
-  /* position: absolute;
-  bottom: 0px;
-  width: 100%; */
   background-color: #252525;
   display: flex;
   justify-content: space-around;
@@ -327,7 +323,9 @@ td > div {
 }
 
 .textFooter {
+  text-align: start;
   color: white;
+  font-size: 20px;
 }
 
 a > i {
@@ -340,7 +338,6 @@ a > i {
 }
 
 .searchList {
-  visibility: visible;
   opacity: 1;
   position: absolute;
   width: 100%;
@@ -355,9 +352,11 @@ a > i {
 div ul {
   display: flex;
   flex-direction: column;
+  padding: 0px;
 }
 
 .searchResult {
+  visibility: hidden;
   background-color: #000;
   position: absolute;
   top: 100%;
@@ -367,10 +366,6 @@ div ul li {
   color: white;
   list-style-type: none;
   width: 220px;
-}
-
-div ul {
-  padding: 0px;
 }
 
 div ul li a {
@@ -383,20 +378,17 @@ div ul li a {
   cursor: pointer;
 }
 
+.searchResultItem:hover {
+  background-color: rgb(45, 45, 45);
+}
+
 .active {
   visibility: visible;
 }
 
-.tongQuanHe {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.videoTongQuanHe {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+.videoContainer {
+  display: none;
+  background-color: rgb(45, 45, 45);
 }
 
 .video {
@@ -409,14 +401,31 @@ div ul li a {
 }
 
 .slot {
-  width: 380px;
-  height: 380px;
+  width: 300px;
   background-color: rgba(0, 0, 0, 0.2);
   margin: 5px 5px;
+  border-radius: 4px;
 }
 
 .team {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.removeBtn {
+  display: block;
+  background-color: rgb(255, 47, 47);
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+div p {
+  display: block;
+  text-align: center;
+  color: white;
+  font-size: 30px;
 }
